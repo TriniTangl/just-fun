@@ -1,0 +1,151 @@
+Додати обробники подій до майбутніх елементів:
+
+Кнопка CREATE - створює (створює, а не змінює HTML) наступні елементи та
+2-5 текстових поля: прізвище, ім'я, по-батькові, e-mail, password
+прапорці (від 3-х позицій), наприклад, виробники
+2-і групи перемикачів (від 3-х позицій), наприклад, кольори (базові, відтінки)
+2 об'єкти Select: група товару, назва товару.
+вартість (при зміні моделі)
+однотипні елементи створюються циклічно, Label є обов'язковим
+
+Кнопка REMOVE  видаляє елементи.
+
+Обрані значення відображати у табличці.
+Оновлюється при зміні тексту/вибраному значенні будь-якого елементу.
+До таблиці застосувати пошук, сортування...
+Додати коментарі  до коду сторінки
+
+
+
+
+
+
+
+Ford - [Escape, Explorer, F-150, Ranger, Focus]
+Renault - [Clio, Fluence, Koleos, Captur, Megane]
+Toyota - [Highlander, Corolla, Tacoma, Camry, RAV4]
+Volkswagen - [Golf R, ID.4, Jetta, Taos, Tiguan]
+Volvo - [S90, V90, V60, XC90, XC40]
+
+<form>
+    <fieldset>
+        <legend>ПІБ</legend>
+        <div class="row l-variant">
+            <label for="second-name">Прізвище:</label>
+            <input type="text" name="second-name" id="second-name" placeholder="Введіть прізвище...">
+        </div>
+        <div class="row l-variant">
+            <label for="first-name">Імʼя:</label>
+            <input type="text" name="first-name" id="first-name" placeholder="Введіть імʼя...">
+        </div>
+        <div class="row l-variant">
+            <label for="last-name">По батькові:</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Введіть по батькові...">
+        </div>
+        <div class="helper">Введіть, будь ласка, з великої літери.</div>
+    </fieldset>
+    <fieldset>
+        <legend>Дані для доступу</legend>
+        <div class="row l-variant">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="someone@example.com">
+        </div>
+        <div class="row l-variant">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <div class="helper">Пароль має включати великі/малі літери та цифри.</div>
+    </fieldset>
+    <fieldset>
+        <legend>Виробник / Рік</legend>
+        <div class="row l-variant">
+            <label for="manufacturer">Виробник:</label>
+            <select name="manufacturer" id="manufacturer">
+                <option value="" disabled selected>Виберіть виробника...</option>
+                <option value="value1">Value 1</option>
+                <option value="value2">Value 2</option>
+                <option value="value3">Value 3</option>
+            </select>
+        </div>
+        <div class="row l-variant">
+            <label for="production-year">Рік:</label>
+            <select name="production-year" id="production-year">
+                <option value="" disabled selected>Виберіть рік...</option>
+                <option value="value1">Value 1</option>
+                <option value="value2">Value 2</option>
+                <option value="value3">Value 3</option>
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Колір</legend>
+        <div class="helper">Кузов</div>
+        <div class="row r-variant">
+            <input type="radio" name="color" id="color1"><label for="color1">Color 1</label>
+        </div>
+        <div class="row r-variant">
+            <input type="radio" name="color" id="color2"><label for="color2">Color 2</label>
+        </div>
+        <div class="row r-variant">
+            <input type="radio" name="color" id="color3"><label for="color3">Color 3</label>
+        </div>
+
+        <div class="helper">Салон</div>
+        <div class="row r-variant">
+            <input type="radio" name="color" id="color4"><label for="color4">Color 1</label>
+        </div>
+        <div class="row r-variant">
+            <input type="radio" name="color" id="color5"><label for="color5">Color 2</label>
+        </div>
+        <div class="row r-variant">
+            <input type="radio" name="color" id="color6"><label for="color6">Color 3</label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Модель(і) / Вартість</legend>
+        <div class="row r-variant">
+            <input type="checkbox" name="model1" id="model1" value="model1"><label for="model1">Model 1</label>
+        </div>
+        <div class="row r-variant">
+            <input type="checkbox" name="model2" id="model2" value="model2"><label for="model2">Model 2</label>
+        </div>
+        <div class="row r-variant">
+            <input type="checkbox" name="model3" id="model3" value="model3"><label for="model3">Model 3</label>
+        </div>
+        <div class="row r-variant">
+            <input type="checkbox" name="model4" id="model4" value="model4"><label for="model4">Model 4</label>
+        </div>
+        <div class="row r-variant">
+            <input type="checkbox" name="model5" id="model5" value="model5"><label for="model5">Model 5</label>
+        </div>
+        <div class="helper">
+            <strong>Вартість:
+                <ins id="price">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ins>
+            </strong>
+        </div>
+    </fieldset>
+</form>
+
+
+
+<table>
+    <thead>
+    <tr>
+        <th>NAME</th>
+        <th>NAME</th>
+        <th>NAME</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>TEST</td>
+        <td>TEST</td>
+        <td>TEST</td>
+    </tr>
+    <tr>
+        <td>TEST</td>
+        <td>TEST</td>
+        <td>TEST</td>
+    </tr>
+    </tbody>
+</table>
