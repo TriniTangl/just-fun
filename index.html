@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Лабораторна робота</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main>
+    <fieldset class="buttons">
+        <legend>Управління формою</legend>
+
+        <button id="create" type="button">CREATE</button>
+        <button id="remove" type="button">REMOVE</button>
+    </fieldset>
+
+    <div id="form-container"></div>
+
+    <fieldset id="table-container">
+        <legend>Вибрано</legend>
+
+        <div class="table-controllers">
+            <fieldset class="data-control-buttons">
+                <legend>Управління даними</legend>
+
+                <button id="remove-data" type="button">REMOVE ALL DATA</button>
+                <div class="helper">* Увага! Видаляє всі поточні та збережені дані!</div>
+            </fieldset>
+
+            <fieldset class="search-form">
+                <legend>Форма пошуку</legend>
+
+                <input type="text" name="search" id="search" placeholder="Введіть символи для пошуку...">
+                <div class="helper">* Для пошуку введіть 3 і більше символів.</div>
+            </fieldset>
+        </div>
+    </fieldset>
+</main>
+
+<script src="constants.js" type="module"></script>
+<script src="main.js" type="module"></script>
+</body>
+</html>

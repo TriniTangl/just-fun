@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Fira Sans", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+main > * {
+    margin-bottom: 20px;
+}
+
+label,
+button,
+select,
+input[type=radio],
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons > button {
+    width: 49%;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+form > fieldset {
+    flex: 1 0 14%;
+    margin-bottom: 5px;
+}
+
+form > fieldset > .row {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+form > fieldset > .helper {
+    margin: 10px 0 5px;
+}
+
+form > fieldset > .row.l-variant {
+    justify-content: space-between;
+}
+
+.row.l-variant > input,
+.row.l-variant > select {
+    min-width: 200px;
+}
+
+.row.l-variant > label {
+    min-width: 100px;
+}
+
+form > fieldset > .row.r-variant {
+    justify-content: flex-start;
+}
+
+.row.r-variant > input {
+    width: 16px;
+    margin-right: 5px;
+}
+
+form > fieldset > div:first-of-type {
+    margin-top: 0;
+}
+
+form > fieldset > div:last-of-type {
+    margin-bottom: 0;
+}
+
+#table-container table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#table-container table * {
+    border: 1px solid #000000;
+}
+
+#table-container table th,
+#table-container table td {
+    padding: 5px;
+    font-size: 14px;
+}
+
+#table-container table th {
+    cursor: pointer;
+    background-color: #efefef;
+}
+
+.table-controllers {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    margin-bottom: 10px;
+}
+
+.table-controllers > .data-control-buttons {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.table-controllers > .data-control-buttons button {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.table-controllers > .search-form {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.table-controllers > .search-form legend {
+    text-align: right;
+}
+
+.table-controllers > .data-control-buttons button,
+.table-controllers > .search-form input {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.table-controllers .helper {
+    font-size: 12px;
+}
