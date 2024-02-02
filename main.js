@@ -164,13 +164,12 @@ function renderTable() {
     }
 
     const tableElem = document.createElement('table');
-
-    tableElem.addEventListener('click', (event) => {
-        tableHandler(event.target);
-    });
-
     const theadElem = document.createElement('thead');
     const trHeadElem = document.createElement('tr');
+
+    theadElem.addEventListener('click', (event) => {
+        tableHandler(event.target);
+    });
 
     for (const columnConfig of TABLE_COLUMNS_CONFIG) {
         const thElem = document.createElement('th');
