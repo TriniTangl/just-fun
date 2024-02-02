@@ -1,5 +1,15 @@
+// Оголошення експорту констант до інших файлів
 export { FORM_DATA, FORM_CONFIG, TABLE_COLUMNS_CONFIG, DEFAULT_CURRENT_CHOICE };
 
+/*
+ * Об'єкт, де знаходяться наперед задані дані, які необхідні для створення форми
+ *
+ * @field manufacturers - список виробників
+ * @field productionYears - список років виробництва
+ * @field paints - список можливих кольорів кузова
+ * @field interiors - список можливих кольорів салону
+ * @field models - список всіх доступних моделей
+ * */
 const FORM_DATA = {
     manufacturers: [
         { name: 'Ford', price: 20000 },
@@ -56,6 +66,16 @@ const FORM_DATA = {
     ],
 };
 
+/*
+ * Об'єкт, де знаходиться конфігурація та опис всіх елементів форми у зручному вигляді
+ *
+ * @field tag - назва тегу елемента
+ * @field text - текст, який буде вставлено у тег для відображення
+ * @field isTemplate - позначення чи є цей елемент шаблонним
+ * @field dataSrc - поле із даними для цього шаблонного елементу
+ * @field attributes - набір атрибутів та їх значень даного елементу
+ * @field children - набір та опис нащадків даного елементу
+ * */
 const FORM_CONFIG = {
     tag: 'form',
     children: [
@@ -377,6 +397,13 @@ const FORM_CONFIG = {
     ],
 };
 
+/*
+ * Об'єкт, де знаходиться конфігурація всіх колонок таблиці
+ *
+ * @field name - назва колонки, яка буде відображена користувачеві
+ * @field field - назва поля обʼєкту, в якому записані дані кожного замовлення для цієї колонки
+ * @field sortType - тип даних для функції сортування даних
+ * */
 const TABLE_COLUMNS_CONFIG = [
     { name: 'ID', field: 'id', sortType: 'number' },
     { name: 'ПРІЗВИЩЕ', field: 'secondName', sortType: 'string' },
@@ -392,6 +419,13 @@ const TABLE_COLUMNS_CONFIG = [
     { name: 'ВАРТІСТЬ', field: 'price', sortType: 'number' },
 ];
 
+/*
+ * Об'єкт, де знаходиться конфігурація всіх колонок таблиці
+ *
+ * @field name - назва колонки, яка буде відображена користувачеві
+ * @field field - назва поля обʼєкту, в якому записані дані кожного замовлення для цієї колонки
+ * @field sortType - тип даних для функції сортування даних
+ * */
 const DEFAULT_CURRENT_CHOICE = {
     id: 0,
     secondName: '',

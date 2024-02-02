@@ -1,16 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- Теги meta призначені для коретктного відображення сторінки на різних пристроях -->
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Заголовок сторінки, що відображається як назва вкладки браузера -->
     <title>Лабораторна робота</title>
+    <!-- Підключення CSS файлу, який зводить силі за замовчуванням у різних браузерах до єдиного стандарту -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.css">
+    <!-- Підключення CSS файлу, який містить стилі спеціально для цієї сторінки -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <main>
+    <!-- Блок із кнопками які дозволяють створити або видалити форму -->
     <fieldset class="buttons">
         <legend>Управління формою</legend>
 
@@ -18,12 +23,15 @@
         <button id="remove" type="button">REMOVE</button>
     </fieldset>
 
+    <!-- Блок, куди вставляється форма, згенерована за допомогою JS коду -->
     <div id="form-container"></div>
 
+    <!-- Блок із таблицєю результатів та елементів керування нею -->
     <fieldset id="table-container">
         <legend>Вибрано</legend>
 
         <div class="table-controllers">
+            <!-- Блок із кнопкою, що дозволяє повністю очистити всі введені та збережені дані -->
             <fieldset class="data-control-buttons">
                 <legend>Управління даними</legend>
 
@@ -31,6 +39,7 @@
                 <div class="helper">* Увага! Видаляє всі поточні та збережені дані!</div>
             </fieldset>
 
+            <!-- Блок із полем пошуку, яке дозволяє шукати дані по таблиці -->
             <fieldset class="search-form">
                 <legend>Форма пошуку</legend>
 
@@ -41,7 +50,9 @@
     </fieldset>
 </main>
 
+<!-- Підключення JS файлу, де містяться задані наперед дані та конфігурації форми і таблиці -->
 <script src="constants.js" type="module"></script>
+<!-- Підключення JS файлу, де міститься код створення форми, обробки даних, відображення та керування таблиці -->
 <script src="main.js" type="module"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* Загальні стилі сторінки */
 * {
     box-sizing: border-box;
     font-size: 16px;
@@ -32,6 +33,7 @@ button:disabled {
     cursor: not-allowed;
 }
 
+/* Стилі блоку із кнопками управління формою */
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -43,6 +45,7 @@ button:disabled {
     font-weight: bold;
 }
 
+/* Стилі форми та її елементів */
 form {
     display: flex;
     justify-content: space-between;
@@ -94,6 +97,7 @@ form > fieldset > div:last-of-type {
     margin-bottom: 0;
 }
 
+/* Стилі таблиці, де виводяться введені дані */
 #table-container table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -115,6 +119,7 @@ form > fieldset > div:last-of-type {
     background-color: #efefef;
 }
 
+/* Стилі блоку із кнопкою очищення даних та блоку із полем для пошуку */
 .table-controllers {
     width: 100%;
     display: grid;
