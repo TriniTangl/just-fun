@@ -1,0 +1,49 @@
+fieldset * {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+form * {
+    display: block;
+    margin: 10px 0;
+}
+
+input {
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input.valid {
+    border: 2px solid #00bd08;
+}
+
+input.invalid {
+    border: 2px solid #e50000;
+}
+
+small {
+    font-size: 12px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+i {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 425px) {
+    input,
+    button {
+        width: 100%;
+    }
+}
