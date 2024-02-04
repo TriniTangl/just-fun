@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+dl {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 10px;
+}
+
+dl > dt > a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+dl > dt > a:hover {
+    text-decoration: underline solid #000000;
+    background-color: #dddddd;
+}
+
+dl > dd {
+    font-style: italic;
+    padding: 10px 0 20px;
+}
+
+i {
+    display: inline-block;
+    margin: 5px;
+    padding: 3px;
+    vertical-align: top;
+    border: solid #000000;
+    border-width: 0 2px 2px 0;
+}
+
+.right {
+    transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+}
