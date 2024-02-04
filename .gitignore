@@ -198,3 +198,5 @@ gen
 .firebase/
 .firebaserc
 firebase.json
+
+.DS_Store
