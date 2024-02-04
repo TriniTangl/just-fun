@@ -1,7 +1,6 @@
 name: Deploy to server
 
 on:
-  pull_request:
   push:
     branches: [ master ]
 
@@ -20,6 +19,6 @@ jobs:
           server: 185.241.55.239
           port: 22
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: ./*
+          local_path: ./*!(package.json|README.md)
           remote_path: /home/work_admin/web/vm4209002.43ssd.had.wf/public_html/fun
           args: '-o ConnectTimeout=5'
