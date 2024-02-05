@@ -11,11 +11,11 @@ jobs:
   deploy-via-sftp:
     runs-on: ubuntu-latest
     env:
-      USERNAME: root
-      SERVER_IP: 185.241.55.239
+      USERNAME: ${{ secrets.USERNAME }}
+      SERVER_IP: ${{ secrets.SERVER_IP }}
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       FILES_TO_COPY: ./*
-      REMOTE_PATH: /home/work_admin/web/vm4209002.43ssd.had.wf/public_html/fun
+      REMOTE_PATH: ${{ secrets.REMOTE_PATH }}
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Setup key
