@@ -14,7 +14,7 @@ jobs:
       USERNAME: root
       SERVER_IP: 185.241.55.239
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      FILES_TO_COPY: ./*
+      FILES_TO_COPY: .
       REMOTE_PATH: /home/work_admin/web/vm4209002.43ssd.had.wf/public_html/fun
     steps:
       - uses: actions/checkout@v4.1.1
@@ -25,15 +25,5 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > "$HOME/.ssh/key"
           chmod 600 "$HOME/.ssh/key"
       - name: Deploy
-        run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete $FILES_TO_COPY $USERNAME@$SERVER_IP:$REMOTE_PATH
+        run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete --exclude 'README.md' $FILES_TO_COPY $USERNAME@$SERVER_IP:$REMOTE_PATH
         working-directory: ./
-#      - name: SFTP Deploy
-#        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-#        with:
-#          username: root
-#          server: 185.241.55.239
-#          port: 22
-#          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-#          local_path: ./*!(package.json|README.md)
-#          remote_path: /home/work_admin/web/vm4209002.43ssd.had.wf/public_html/fun
-#          args: '-o ConnectTimeout=5'
